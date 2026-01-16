@@ -6,14 +6,14 @@ AI-powered skills for Magento 2 development with Hyva Theme. These skills extend
 
 | Skill | Description |
 |-------|-------------|
-| [hyva-child-theme](hyva-child-theme/) | Create a Hyva child theme with proper directory structure, Tailwind CSS configuration, and theme inheritance |
-| [hyva-cms-component](hyva-cms-component/) | Create custom Hyva CMS components with field presets, variant support, and PHTML templates |
-| [hyva-compile-tailwind-css](hyva-compile-tailwind-css/) | Compile Tailwind CSS for Hyva themes |
-| [hyva-create-module](hyva-create-module/) | Scaffold new Magento 2 modules with registration.php, composer.json, and module.xml |
-| [hyva-exec-shell-cmd](hyva-exec-shell-cmd/) | Detect development environment (Warden, docker-magento, local) and execute commands with appropriate wrappers |
-| [hyva-render-image](hyva-render-image/) | Generate responsive `<picture>` elements using the Hyva Media view model |
-| [hyva-theme-list](hyva-theme-list/) | Discover all Hyva theme paths in a Magento 2 project |
-| [hyva-ui-component](hyva-ui-component/) | Apply Hyva UI template-based components (headers, footers, galleries, etc.) to themes |
+| [hyva-child-theme](skills/hyva-child-theme/) | Create a Hyva child theme with proper directory structure, Tailwind CSS configuration, and theme inheritance |
+| [hyva-cms-component](skills/hyva-cms-component/) | Create custom Hyva CMS components with field presets, variant support, and PHTML templates |
+| [hyva-compile-tailwind-css](skills/hyva-compile-tailwind-css/) | Compile Tailwind CSS for Hyva themes |
+| [hyva-create-module](skills/hyva-create-module/) | Scaffold new Magento 2 modules with registration.php, composer.json, and module.xml |
+| [hyva-exec-shell-cmd](skills/hyva-exec-shell-cmd/) | Detect development environment (Warden, docker-magento, local) and execute commands with appropriate wrappers |
+| [hyva-render-image](skills/hyva-render-image/) | Generate responsive `<picture>` elements using the Hyva Media view model |
+| [hyva-theme-list](skills/hyva-theme-list/) | Discover all Hyva theme paths in a Magento 2 project |
+| [hyva-ui-component](skills/hyva-ui-component/) | Apply Hyva UI template-based components (headers, footers, galleries, etc.) to themes |
 
 ## Installation
 
