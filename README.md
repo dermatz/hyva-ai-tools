@@ -21,10 +21,10 @@ AI-powered skills for Magento 2 development with Hyva Theme. These skills extend
 
 ```bash
 # For Claude Code
-curl -fsSL https://raw.githubusercontent.com/hyva-themes/hyva-ai-tools/main/install.sh | sh -s claude
+curl -fsSL https://gitlab.hyva.io/hyva-internal/hyva-ai-tools/-/raw/main/install.sh | sh -s claude
 
 # For Gemini
-curl -fsSL https://raw.githubusercontent.com/hyva-ai-themes/hyva-ai-tools/main/install.sh | sh -s gemini
+curl -fsSL https://gitlab.hyva.io/hyva-internal/hyva-ai-tools/-/raw/main/install.sh | sh -s gemini
 ```
 
 ### Manual Installation
