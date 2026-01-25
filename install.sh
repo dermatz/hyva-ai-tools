@@ -5,8 +5,9 @@
 #
 # Usage:
 #   curl -fsSL https://raw.githubusercontent.com/hyva-themes/hyva-ai-tools/refs/heads/main/install.sh | sh -s claude
-#   curl -fsSL https://raw.githubusercontent.com/hyva-themes/hyva-ai-tools/refs/heads/main/install.sh | sh -s gemini
 #   curl -fsSL https://raw.githubusercontent.com/hyva-themes/hyva-ai-tools/refs/heads/main/install.sh | sh -s codex
+#   curl -fsSL https://raw.githubusercontent.com/hyva-themes/hyva-ai-tools/refs/heads/main/install.sh | sh -s cursor
+#   curl -fsSL https://raw.githubusercontent.com/hyva-themes/hyva-ai-tools/refs/heads/main/install.sh | sh -s gemini
 #
 # Copyright (c) Hyva Themes https://hyva.io. All rights reserved.
 # Licensed under the OSL-3.0
@@ -57,11 +58,13 @@ usage() {
     echo "Platforms:"
     echo "  claude    Install skills for Claude Code (.claude/skills/)"
     echo "  codex     Install skills for Codex (.codex/skills/)"
+    echo "  cursor    Install skills for Cursor (.cursor/skills/)"
     echo "  gemini    Install skills for Gemini (.gemini/skills/)"
     echo ""
     echo "Examples:"
     echo "  curl -fsSL https://raw.githubusercontent.com/hyva-themes/hyva-ai-tools/refs/heads/main/install.sh | sh -s claude"
     echo "  curl -fsSL https://raw.githubusercontent.com/hyva-themes/hyva-ai-tools/refs/heads/main/install.sh | sh -s codex"
+    echo "  curl -fsSL https://raw.githubusercontent.com/hyva-themes/hyva-ai-tools/refs/heads/main/install.sh | sh -s cursor"
     echo "  curl -fsSL https://raw.githubusercontent.com/hyva-themes/hyva-ai-tools/refs/heads/main/install.sh | sh -s gemini"
     echo ""
     echo "Environment variables:"
@@ -78,6 +81,9 @@ get_skills_dir() {
             ;;
         codex)
             echo ".codex/skills"
+            ;;
+        cursor)
+            echo ".cursor/skills"
             ;;
         gemini)
             echo ".gemini/skills"
