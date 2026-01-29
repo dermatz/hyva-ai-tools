@@ -11,6 +11,7 @@ knowledge for creating Hyva themes, modules, and CMS components.
 | [hyva-child-theme](skills/hyva-child-theme/)                   | Create a Hyva child theme with proper directory structure, Tailwind CSS configuration, and theme inheritance                    |
 | [hyva-cms-component](skills/hyva-cms-component/)               | Create custom Hyva CMS components with field presets, variant support, and PHTML templates                                      |
 | [hyva-cms-components-dump](skills/hyva-cms-components-dump/)   | Dump combined JSON of all available Hyvä CMS components from active modules                                                     |
+| [hyva-cms-custom-field](skills/hyva-cms-custom-field/)         | Create custom field types and field handlers for Hyvä CMS components                                                            |
 | [hyva-compile-tailwind-css](skills/hyva-compile-tailwind-css/) | Utility skill to compile Tailwind CSS for Hyva themes                                                                           |
 | [hyva-create-module](skills/hyva-create-module/)               | Scaffold new Magento 2 modules in app/code/                                                                                     |
 | [hyva-exec-shell-cmd](skills/hyva-exec-shell-cmd/)             | Utility skill to detect development environment (Warden, docker-magento, local) and execute commands with appropriate wrappers  |
