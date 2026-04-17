@@ -99,14 +99,19 @@ prompt_user() {
     echo "$REPLY"
 }
 
-# Auto-detect agent directory from CWD
-# Checks only known agent dot-directories for a skills subdirectory
+# Auto-detect agent directory by searching CWD and parent directories
+# Traverses up to the filesystem root looking for a known agent dot-directory
+# Outputs the absolute path to the detected agent dot-directory (e.g. /project/.claude)
 detect_agent_dir() {
-    for dot_dir in $KNOWN_AGENT_DIRS; do
-        if [ -d "./$dot_dir/skills" ]; then
-            echo "$dot_dir"
-            return 0
-        fi
+    current_dir="$(pwd)"
+    while [ "$current_dir" != "/" ]; do
+        for dot_dir in $KNOWN_AGENT_DIRS; do
+            if [ -d "$current_dir/$dot_dir/skills" ]; then
+                echo "$current_dir/$dot_dir"
+                return 0
+            fi
+        done
+        current_dir="$(dirname "$current_dir")"
     done
     return 1
 }
@@ -318,13 +323,14 @@ else
         print_info "Using agent from HYVA_SKILLS_AGENT: $AGENT"
     else
         # Try auto-detection
-        detected_dir="$(detect_agent_dir || true)"
-        if [ -n "$detected_dir" ]; then
+        detected_path="$(detect_agent_dir || true)"
+        if [ -n "$detected_path" ]; then
+            detected_dir="$(basename "$detected_path")"
             detected_agent="$(dir_to_agent "$detected_dir")"
-            answer="$(prompt_user "Detected $detected_agent agent ($detected_dir/skills). Install there? [Y/n/agent-name]: ")"
+            answer="$(prompt_user "Detected $detected_agent agent ($detected_path/skills). Install there? [Y/n/agent-name]: ")"
             case "$answer" in
                 ""|y|Y|yes|Yes)
-                    TARGET_DIR="./$detected_dir/skills"
+                    TARGET_DIR="$detected_path/skills"
                     ;;
                 n|N|no|No)
                     print_error "Installation cancelled."
